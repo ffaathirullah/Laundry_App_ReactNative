@@ -1,10 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Akun from '../pages/Akun';
-import Home from '../pages/Home';
-import Pesanan from '../pages/Pesanan';
-import Splash from '../pages/Splash';
+import {Akun, Home, Pesanan, Splash} from '../pages';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -18,7 +15,7 @@ const MainApp = () => (
 );
 
 const Router = () => (
-  <Stack.Navigator initialRouteName="MainApp">
+  <Stack.Navigator initialRouteName="Splash">
     <Stack.Screen
       name="MainApp"
       component={MainApp}
