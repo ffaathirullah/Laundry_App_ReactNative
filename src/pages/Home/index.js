@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 
 const Home = ({}) => (
   <View style={styles.container}>
-    <Text>I'm Home</Text>
+    <Text>Home</Text>
   </View>
 );
 
