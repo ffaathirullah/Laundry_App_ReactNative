@@ -9,6 +9,7 @@ import {
 import React from 'react';
 
 import {Imageheader, background} from '../../assets';
+import {Saldo} from '../../component';
 
 const Home = ({}) => (
   <View style={styles.container}>
@@ -19,6 +20,7 @@ const Home = ({}) => (
         <Text style={styles.username}>Fachrul</Text>
       </View>
     </ImageBackground>
+    <Saldo />
   </View>
 );
 
