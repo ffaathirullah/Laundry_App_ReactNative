@@ -1,8 +1,8 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-
 import {WarnaUtama} from '../../utils';
 import BottomIcon from '../BottomIcon';
+import Gap from '../Gap';
 
 const Saldo = ({}) => {
   return (
@@ -18,8 +18,9 @@ const Saldo = ({}) => {
         </View>
       </View>
       <View style={styles.bottomAksi}>
-        <BottomIcon />
-        <BottomIcon />
+        <BottomIcon title="Add Saldo" />
+        <Gap width={10} />
+        <BottomIcon title="Get Point" />
       </View>
     </View>
   );
