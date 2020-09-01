@@ -5,35 +5,45 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 
 import {Imageheader, background} from '../../assets';
 import {Saldo} from '../../component';
+import {WarnaAbu} from '../../utils';
 import BottomIcon from '../../component/BottomIcon';
-
+import {PesananAktif} from '../../pages';
 const Home = ({}) => (
-  <View style={styles.container}>
-    <ImageBackground source={Imageheader} style={styles.header}>
-      <Image source={background} style={styles.logo} />
-      <View style={styles.hello}>
-        <Text style={styles.selamat}>Selamat Datang</Text>
-        <Text style={styles.username}>Fachrul</Text>
+  <ScrollView>
+    <View style={styles.container}>
+      <ImageBackground source={Imageheader} style={styles.header}>
+        <Image source={background} style={styles.logo} />
+        <View style={styles.hello}>
+          <Text style={styles.selamat}>Selamat Datang</Text>
+          <Text style={styles.username}>Fachrul</Text>
+        </View>
+      </ImageBackground>
+      <Saldo />
+      <View style={styles.layanan}>
+        <Text style={styles.label}>Layanan Kami</Text>
+        <View style={styles.iconLayanan}>
+          <BottomIcon title="Kiloan" type="layanan" />
+          <BottomIcon title="Satuan" type="layanan" />
+          <BottomIcon title="Vip" type="layanan" />
+          <BottomIcon title="Karpet" type="layanan" />
+          <BottomIcon title="Setrika saja" type="layanan" />
+          <BottomIcon title="Express" type="layanan" />
+        </View>
       </View>
-    </ImageBackground>
-    <Saldo />
-    <View style={styles.layanan}>
-      <Text style={styles.label}>Layanan Kami</Text>
-      <View style={styles.iconLayanan}>
-        <BottomIcon title="Kiloan" type="layanan" />
-        <BottomIcon title="Satuan" type="layanan" />
-        <BottomIcon title="Vip" type="layanan" />
-        <BottomIcon title="Karpet" type="layanan" />
-        <BottomIcon title="Setrika saja" type="layanan" />
-        <BottomIcon title="Express" type="layanan" />
+      <View style={styles.pesananAktif}>
+        <Text style={styles.label}> Pesanan Aktif</Text>
+        <PesananAktif />
+        <PesananAktif />
+        <PesananAktif />
       </View>
     </View>
-  </View>
+  </ScrollView>
 );
 
 export default Home;
@@ -42,6 +52,7 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
     flex: 1,
   },
   header: {
@@ -75,7 +86,15 @@ const styles = StyleSheet.create({
   iconLayanan: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20,
+    marginTop: 10,
     flexWrap: 'wrap',
+  },
+  pesananAktif: {
+    paddingTop: 10,
+    paddingHorizontal: 10,
+    backgroundColor: WarnaAbu,
+    flex: 1,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
   },
 });
