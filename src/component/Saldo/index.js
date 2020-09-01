@@ -28,7 +28,6 @@ const Saldo = ({}) => {
 
 export default Saldo;
 
-const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
@@ -73,7 +72,9 @@ const styles = StyleSheet.create({
     color: WarnaUtama,
   },
   bottomAksi: {
+    flex: 1,
     flexDirection: 'row',
     marginLeft: 10,
+    justifyContent: 'flex-end',
   },
 });

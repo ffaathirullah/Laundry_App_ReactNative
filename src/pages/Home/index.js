@@ -10,6 +10,7 @@ import React from 'react';
 
 import {Imageheader, background} from '../../assets';
 import {Saldo} from '../../component';
+import BottomIcon from '../../component/BottomIcon';
 
 const Home = ({}) => (
   <View style={styles.container}>
@@ -21,6 +22,17 @@ const Home = ({}) => (
       </View>
     </ImageBackground>
     <Saldo />
+    <View style={styles.layanan}>
+      <Text style={styles.label}>Layanan Kami</Text>
+      <View style={styles.iconLayanan}>
+        <BottomIcon title="Kiloan" type="layanan" />
+        <BottomIcon title="Satuan" type="layanan" />
+        <BottomIcon title="Vip" type="layanan" />
+        <BottomIcon title="Karpet" type="layanan" />
+        <BottomIcon title="Setrika saja" type="layanan" />
+        <BottomIcon title="Express" type="layanan" />
+      </View>
+    </View>
   </View>
 );
 
@@ -52,5 +64,18 @@ const styles = StyleSheet.create({
   username: {
     fontSize: 22,
     fontFamily: 'TitilliumWeb-Bold',
+  },
+  layanan: {
+    paddingLeft: 30,
+  },
+  label: {
+    fontSize: 18,
+    fontFamily: 'TitilliumWeb-Bold',
+  },
+  iconLayanan: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
+    flexWrap: 'wrap',
   },
 });
