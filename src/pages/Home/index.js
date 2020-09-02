@@ -13,7 +13,7 @@ import {Imageheader, background} from '../../assets';
 import {Saldo} from '../../component';
 import {WarnaAbu} from '../../utils';
 import BottomIcon from '../../component/BottomIcon';
-import {PesananAktif} from '../../pages';
+import {PesananAktif} from '../../component';
 const Home = ({}) => (
   <ScrollView>
     <View style={styles.container}>
@@ -38,9 +38,9 @@ const Home = ({}) => (
       </View>
       <View style={styles.pesananAktif}>
         <Text style={styles.label}> Pesanan Aktif</Text>
-        <PesananAktif />
-        <PesananAktif />
-        <PesananAktif />
+        <PesananAktif title="Pesanan No. 0002142" status="Sudah Selesai" />
+        <PesananAktif title="Pesanan No. 0002142" status="Masih Dicuci" />
+        <PesananAktif title="Pesanan No. 0002142" status="Sudah Selesai" />
       </View>
     </View>
   </ScrollView>

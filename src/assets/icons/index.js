@@ -12,6 +12,7 @@ import Icon_karpet from './karpet.svg';
 import Icon_kiloan from './kiloan.svg';
 import Icon_setrika from './setrika.svg';
 import Icon_vip from './vip.svg';
+import Icon_PesananaAktif from './pesanananAktif.svg';
 
 export {
   Icon_akun,
@@ -28,4 +29,5 @@ export {
   Icon_karpet,
   Icon_setrika,
   Icon_express,
+  Icon_PesananaAktif,
 };
